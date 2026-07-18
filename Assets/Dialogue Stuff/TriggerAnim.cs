@@ -1,9 +1,11 @@
+using System.Diagnostics;
 using UnityEngine;
 using Yarn.Unity;
 
 public class TriggerAnim : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] AudioSource audioSource;
 
     private void Start()
     {
@@ -14,5 +16,12 @@ public class TriggerAnim : MonoBehaviour
     public void TriggerAnimation()
     {
         animator.SetTrigger("OnLineEnd");
+    }
+
+    [YarnCommand("gullcaw")]
+    public void GullCaw()
+    {
+        audioSource.Play();
+        UnityEngine.Debug.Log("played gull sound");
     }
 }
