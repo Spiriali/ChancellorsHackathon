@@ -123,9 +123,6 @@ public class StacheMovement : MonoBehaviour
             yield return null;
         }
 
-        // ensure exact landing position
-        transform.position = startPos + (forwardDirection * jumpForwardDistance);
-
         isJumping = false;
     }
 }
