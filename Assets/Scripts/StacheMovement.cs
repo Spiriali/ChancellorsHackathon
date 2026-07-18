@@ -36,18 +36,16 @@ public class StacheMovement : MonoBehaviour
             return;
         }
 
-        // only rotate if not actively jumping for simplicity
-        if (Input.GetKeyDown(KeyCode.A) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.A))
         {
             Move('A');
         }
-        else if (Input.GetKeyDown(KeyCode.D) && !isJumping)
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             Move('D');
         }
-        // only jump if not actively rotating for simplicity
         // prevent double jumping
-        else if (Input.GetKeyDown(KeyCode.Space) && !isRotating && !isJumping)
+        else if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             StartCoroutine(Jump());
         }
