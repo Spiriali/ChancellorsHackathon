@@ -45,7 +45,7 @@ public class StacheMovement : MonoBehaviour
             Move('D');
         }
         // prevent double jumping
-        else if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        else if (Input.GetKey(KeyCode.Space) && !isJumping)
         {
             StartCoroutine(Jump());
         }
