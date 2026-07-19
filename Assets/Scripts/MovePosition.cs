@@ -59,6 +59,8 @@ public class MoveBackAndForth : MonoBehaviour
 {
     public enum MoveAxis { X, Y, Z }
 
+    private float timer = 0.0f;
+
     [Header("Movement Settings")]
     [Tooltip("The local axis to move along")]
     public MoveAxis selectedAxis = MoveAxis.X;
@@ -79,8 +81,10 @@ public class MoveBackAndForth : MonoBehaviour
 
     void Update()
     {
+        timer += Time.deltaTime * speed;
+
         // Calculate the ping-pong offset using a sine wave instantly using Time.time
-        float offset = Mathf.Sin(Time.time * speed) * distance;
+        float offset = Mathf.Sin(timer) * distance;
 
         // Determine the movement vector based on the selected axis
         Vector3 movementVector = Vector3.zero;
