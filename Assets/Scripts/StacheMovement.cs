@@ -23,12 +23,12 @@ public class StacheMovement : MonoBehaviour
     [Header("Movement Settings")]
     
     // degrees of mustache rotation per turn stroke
-    public float turnAnglePerStroke = 0.5f;
-    public float rotationSpeed = 300.0f;
+    public float turnAnglePerStroke = 0.75f;
+    public float rotationSpeed = 175.0f;
     public float moveSpeed = 5.0f;
 
     [Header("Jump settings")]
-    public float jumpHeight = 1.5f;
+    public float jumpHeight = 2.5f;
 
     private bool isJumping = false;
 
