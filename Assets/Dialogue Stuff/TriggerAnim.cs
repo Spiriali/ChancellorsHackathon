@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.SceneManagement;
 
 public class TriggerAnim : MonoBehaviour
 {
@@ -23,5 +24,11 @@ public class TriggerAnim : MonoBehaviour
     {
         audioSource.Play();
         UnityEngine.Debug.Log("played gull sound");
+    }
+
+    [YarnCommand("scenetransition")]
+    public void SceneTransition()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
