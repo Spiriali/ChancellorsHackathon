@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PathFollower : MonoBehaviour
 {
@@ -51,4 +51,54 @@ public class PathFollower : MonoBehaviour
             }
         }
     }
+}*/
+
+using UnityEngine;
+
+public class MoveBackAndForth : MonoBehaviour
+{
+    public enum MoveAxis { X, Y, Z }
+
+    [Header("Movement Settings")]
+    [Tooltip("The local axis to move along")]
+    public MoveAxis selectedAxis = MoveAxis.X;
+
+    [Tooltip("Speed of the movement loop")]
+    public float speed = 2f;
+
+    [Tooltip("Total distance the object will travel from the center to one side")]
+    public float distance = 3f;
+
+    private Vector3 startPosition;
+
+    void Start()
+    {
+        // Store the initial position of the object
+        startPosition = transform.localPosition;
+    }
+
+    void Update()
+    {
+        // Calculate the ping-pong offset using a sine wave instantly using Time.time
+        float offset = Mathf.Sin(Time.time * speed) * distance;
+
+        // Determine the movement vector based on the selected axis
+        Vector3 movementVector = Vector3.zero;
+        switch (selectedAxis)
+        {
+            case MoveAxis.X:
+                movementVector = new Vector3(offset, 0f, 0f);
+                break;
+            case MoveAxis.Y:
+                movementVector = new Vector3(0f, offset, 0f);
+                break;
+            case MoveAxis.Z:
+                movementVector = new Vector3(0f, 0f, offset);
+                break;
+        }
+
+        // Apply the movement relative to the starting position
+        transform.localPosition = startPosition + movementVector;
+    }
 }
+

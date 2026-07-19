@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 3815371331460169653}
   - component: {fileID: 6717766737318618989}
   m_Layer: 0
-  m_Name: surreal+elephant+skyscraper+3d+model
+  m_Name: normielephant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391eeffd91c923441810e4656507b0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathParent: {fileID: 0}
-  speed: 2
-  loopPath: 1
+  selectedAxis: 0
+  speed: 0.7
+  distance: 12
 --- !u!1 &2637247580671736337
 GameObject:
   m_ObjectHideFlags: 0
