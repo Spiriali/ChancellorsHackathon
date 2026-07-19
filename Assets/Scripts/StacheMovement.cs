@@ -3,6 +3,17 @@ using System.Collections;
 
 public class StacheMovement : MonoBehaviour
 {
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+        // Project Settings > Physics > CCD
+        //rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+    }
+
     // get right and left mustache tips for rotation
     [Header("Pivot Points")]
     public Transform leftTip;
@@ -20,7 +31,6 @@ public class StacheMovement : MonoBehaviour
     [Header("Jump settings")]
     public float jumpHeight = 1.5f;
     public float jumpForwardDistance = 5.0f;
-    public float jumpDuration = 2.0f;
 
     private bool isRotating = false;
     private bool isJumping = false;
@@ -30,24 +40,20 @@ public class StacheMovement : MonoBehaviour
 
     void Update()
     {
-        // prevent holding down key
-        if (isRotating)
-        {
-            return;
-        }
+        
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             Move('A');
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             Move('D');
         }
         // prevent double jumping
         else if (Input.GetKey(KeyCode.Space) && !isJumping)
         {
-            StartCoroutine(Jump());
+            Jump();
         }
     }
 
@@ -98,6 +104,43 @@ public class StacheMovement : MonoBehaviour
         isRotating = false;
     }
 
+    void Jump()
+    {
+        isJumping = true;
+
+        float g = Mathf.Abs(Physics.gravity.y);
+
+        // vertical speed needed to reach jumpHeight at the peak of the arc
+        float vY = Mathf.Sqrt(2f * g * jumpHeight);
+
+        // total time spent in the air, from launch back down to the same height
+        float airTime = 2f * vY / g;
+
+        // forward speed needed to cover jumpForwardDistance in that time
+        float vForward = jumpForwardDistance / airTime;
+
+        Vector3 forwardDirection = transform.forward;
+        Vector3 launchVelocity = forwardDirection * vForward + Vector3.up * vY;
+     
+        rb.linearVelocity = launchVelocity;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // only clear isJumping once we hit something roughly beneath us to prevent wall jumping
+        if (!isJumping) return;
+
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.5f)
+            {
+                isJumping = false;
+                break;
+            }
+        }
+    }
+
+    /*
     IEnumerator Jump()
     {
         isJumping = true;
@@ -120,9 +163,10 @@ public class StacheMovement : MonoBehaviour
 
             transform.position = startPos + (forwardDirection * forwardOffset) + (Vector3.up * heightOffset);
 
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         isJumping = false;
     }
+    */
 }
