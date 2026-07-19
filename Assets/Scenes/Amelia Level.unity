@@ -127,6 +127,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 188932756110720728, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 188932756110720728, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 760739110308056090, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -178,6 +186,26 @@ PrefabInstance:
     - target: {fileID: 760739111097193592, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821857898820867943, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c4d323849afdd34cbce7be2e3c349ad, type: 2}
+    - target: {fileID: 3463760751554932009, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.376674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463760751554932009, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.376674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463760751554932009, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9.376674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463760751554932009, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.2262
       objectReference: {fileID: 0}
     - target: {fileID: 5534241354060244562, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
       propertyPath: m_AnchorMax.y
@@ -250,6 +278,42 @@ PrefabInstance:
     - target: {fileID: 5805606931328991915, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
       propertyPath: m_Name
       value: Cube Face Parkour
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822189368814074461, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c4d323849afdd34cbce7be2e3c349ad, type: 2}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.9300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518975848411695196, guid: 0314ea1435401b047b9d8eb99abe3c50, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
