@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 151.432
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 72ae3343f0e6a584c8cd9a8751a9fd23, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a4ba00bf0950dce4f9e570f4b0e53b40, type: 2}
     - target: {fileID: 919132149155446097, guid: 72ae3343f0e6a584c8cd9a8751a9fd23, type: 3}
       propertyPath: m_Name
       value: HandChair
