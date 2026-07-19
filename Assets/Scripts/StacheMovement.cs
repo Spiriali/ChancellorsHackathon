@@ -40,17 +40,13 @@ public class StacheMovement : MonoBehaviour
 
     void Update()
     {
-        // prevent holding down key
-        if (isRotating)
-        {
-            return;
-        }
+        
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             Move('A');
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             Move('D');
         }
@@ -113,7 +109,6 @@ public class StacheMovement : MonoBehaviour
         isJumping = true;
 
         float g = Mathf.Abs(Physics.gravity.y);
-        if (g <= 0f) g = 9.81f; // safety fallback if gravity is misconfigured
 
         // vertical speed needed to reach jumpHeight at the peak of the arc
         float vY = Mathf.Sqrt(2f * g * jumpHeight);
