@@ -74,7 +74,7 @@ public class SpikeTrapController : MonoBehaviour
         {
             if (spike != null)
             {
-                SingleSpikeTrap script = spike.GetComponent<SingleSpikeTrap>();
+                SingleSpikeTrap script = spike.GetComponentInChildren<SingleSpikeTrap>();
                 if (script != null) script.enabled = true;
             }
         }
@@ -86,7 +86,7 @@ public class SpikeTrapController : MonoBehaviour
             spikesAreStillActive = false; // Assume they are done
             foreach (GameObject spike in spikes)
             {
-                if (spike != null && spike.GetComponent<SingleSpikeTrap>().enabled)
+                if (spike != null && spike.GetComponentInChildren<SingleSpikeTrap>().enabled)
                 {
                     spikesAreStillActive = true; // Found one still running!
                     break;
