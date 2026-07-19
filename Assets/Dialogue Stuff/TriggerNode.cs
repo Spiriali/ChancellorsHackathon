@@ -8,7 +8,7 @@ public class TriggerNode : MonoBehaviour
     private DialogueRunner dialogueRunner;
     private DialogueBox dialogue;
     private StacheMovement stacheMovement;
-    //[SerializeField] MouseMovement mouseMovement;
+    [SerializeField] CameraRotation mouseMovement;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -26,7 +26,7 @@ public class TriggerNode : MonoBehaviour
     {
         dialogueRunner = dialogueSystem.GetComponent<DialogueRunner>();
         stacheMovement = GetComponent<StacheMovement>();
-        //if (mouseMovement == null) { mouseMovement = GetComponent<MouseMovement>(); }
+        if (mouseMovement == null) { mouseMovement = GetComponent<CameraRotation>(); }
     }
 
     private void DialogueStart()
@@ -49,11 +49,11 @@ public class TriggerNode : MonoBehaviour
     public void UnEnable()
     {
         if (stacheMovement != null) { stacheMovement.enabled = false; }
-        //if (mouseMovement != null) { mouseMovement.enabled = false; }
+        if (mouseMovement != null) { mouseMovement.enabled = false; }
     }
     private void ReEnable()
     {
         if (stacheMovement != null) { stacheMovement.enabled = true; }
-        //if (mouseMovement != null) { mouseMovement.enabled = true; }
+        if (mouseMovement != null) { mouseMovement.enabled = true; }
     }
 }
