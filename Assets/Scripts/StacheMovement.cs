@@ -21,22 +21,17 @@ public class StacheMovement : MonoBehaviour
 
    
     [Header("Movement Settings")]
-
-    // degrees of mustache rotation per forward stroke
-    public float walkAnglePerStroke = 50.0f;
-    // degrees of mustache rotation per turn stroke (to allow smaller turns)
-    public float turnAnglePerStroke = 25.0f;
+    
+    // degrees of mustache rotation per turn stroke
+    public float turnAnglePerStroke = 0.5f;
     public float rotationSpeed = 300.0f;
+    public float moveSpeed = 5.0f;
 
     [Header("Jump settings")]
     public float jumpHeight = 1.5f;
-    public float jumpForwardDistance = 5.0f;
 
-    private bool isRotating = false;
     private bool isJumping = false;
 
-    // keep track of the last key hit to differentiate between forward movement and turning
-    private char lastKey = ' ';
 
     void Update()
     {
@@ -55,35 +50,30 @@ public class StacheMovement : MonoBehaviour
         {
             Jump();
         }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            Move();
+        }
     }
 
     void Move(char key)
     {
-        // check if the player is trying to turn
-        bool isTurning = (key == lastKey);
-
-        // set appropriate angle
-        float angle = isTurning ? turnAnglePerStroke : walkAnglePerStroke;
-
-        // update last key
-        lastKey = key;
 
         if (key == 'D')
         {
             // pivot on the right tip
-            StartCoroutine(RotateAroundPivot(rightTip, angle));
+            StartCoroutine(RotateAroundPivot(rightTip, turnAnglePerStroke));
         }
         else
         {
             // pivot on the left tip
-            StartCoroutine(RotateAroundPivot(leftTip, -angle));
+            StartCoroutine(RotateAroundPivot(leftTip, -turnAnglePerStroke));
 
         }
     }
 
     IEnumerator RotateAroundPivot(Transform pivotTransform, float totalAngle)
     {
-        isRotating = true;
         float rotated = 0.0f;
         float sign = Mathf.Sign(totalAngle);
         float absTotal = Mathf.Abs(totalAngle);
@@ -101,29 +91,33 @@ public class StacheMovement : MonoBehaviour
             yield return null;
         }
 
-        isRotating = false;
     }
 
     void Jump()
     {
         isJumping = true;
-
         float g = Mathf.Abs(Physics.gravity.y);
-
         // vertical speed needed to reach jumpHeight at the peak of the arc
         float vY = Mathf.Sqrt(2f * g * jumpHeight);
 
-        // total time spent in the air, from launch back down to the same height
-        float airTime = 2f * vY / g;
-
-        // forward speed needed to cover jumpForwardDistance in that time
-        float vForward = jumpForwardDistance / airTime;
-
-        Vector3 forwardDirection = transform.forward;
-        Vector3 launchVelocity = forwardDirection * vForward + Vector3.up * vY;
-     
-        rb.linearVelocity = launchVelocity;
+        // only override the Y component, keep whatever horizontal velocity already exists
+        Vector3 velocity = rb.linearVelocity;
+        velocity.y = vY;
+        rb.linearVelocity = velocity;
     }
+
+    void Move()
+    {
+        Vector3 forwardDirection = transform.forward;
+        Vector3 moveVelocity = forwardDirection * moveSpeed;
+
+        // only override X/Z, preserve current vertical velocity (falling/jumping)
+        Vector3 velocity = rb.linearVelocity;
+        velocity.x = moveVelocity.x;
+        velocity.z = moveVelocity.z;
+        rb.linearVelocity = velocity;
+    }
+
 
     void OnCollisionEnter(Collision collision)
     {
