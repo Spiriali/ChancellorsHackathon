@@ -7,6 +7,7 @@ Seagull: CAW!
 <<wait 1.5>>
 Salvador Dali: My stache! The source of all my artistic prowess!
 Salvador Dali: ...How will I paint now?
+<<scenetransition IntroCanvas>>
 ===
 
 title: LvlIntro
@@ -16,7 +17,7 @@ Stache: I need to find my way back to Salvador's face.
 Stache: That looks like a face right there...
 Stache: I'd better make my way to the upper lip and get a closer look.
 Stache: But those weird balls don't look particularly stable.
-<i>Press <b>W</b> to move forward, <b>A</b> and <b>D</b> to rotate, and <b>Space</b> to jump.</i>
+<i>Press <b>W</b> to move forward, <b>A</b> and <b>D</b> to rotate, and <b>Space</b> to jump. ,b>Move mouse to rotate camera.</b></i>
 <<dialogueend Stache>>
 ===
 
