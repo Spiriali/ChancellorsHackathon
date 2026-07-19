@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082672077029371039, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: m_Name
-      value: surreal+elephant+skyscraper+3d+model (1) Variant
+      value: elephvator
       objectReference: {fileID: 0}
     - target: {fileID: 1159618937100411006, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: speed
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1159618937100411006, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: maxAngle
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1159618937100411006, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: rotationAxis.x
@@ -74,15 +74,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3815371331460169653, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.14
+      value: -128.4
       objectReference: {fileID: 0}
     - target: {fileID: 3815371331460169653, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -35.91
+      value: -95.6
       objectReference: {fileID: 0}
     - target: {fileID: 3815371331460169653, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.9
+      value: 177.4
       objectReference: {fileID: 0}
     - target: {fileID: 3815371331460169653, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4373147349813844831, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: maxAngle
-      value: -25
+      value: -22
       objectReference: {fileID: 0}
     - target: {fileID: 4373147349813844831, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: rotationAxis.x
@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631277693067541908, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: maxAngle
-      value: -25
+      value: -22
       objectReference: {fileID: 0}
     - target: {fileID: 5631277693067541908, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: rotationAxis.x
@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6358282679807748313, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: maxAngle
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6358282679807748313, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: rotationAxis.x
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6717766737318618989, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: speed
-      value: 1
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 6717766737318618989, guid: f692b6d11704c8b4fbb974b6ed8e6ab3, type: 3}
       propertyPath: distance
