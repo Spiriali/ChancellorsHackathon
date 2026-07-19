@@ -899,7 +899,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -921,11 +927,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: a29215e7-823b-4ba1-b85e-e7df87417d1b
+  cloudProjectId: 5b941e8a-609f-4fb7-bb11-b7d194144333
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Salvi's Missing Stache 2026-07-17_20-15-32
-  organizationId: spiriali
+  projectName: Salvi's Missing Stache
+  organizationId: alyssachangho
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro PNG Scene.unity
     guid: bc799ad7f515e5741b755a2e60b95bb4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Amelia Level.unity
     guid: ecd54f119c7684e418188890fd195b47
+  - enabled: 1
+    path: Assets/Scenes/CombinedLevels.unity
+    guid: 7c59bbd5dce00cf4a889c9623578129f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
