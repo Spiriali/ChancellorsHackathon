@@ -1,0 +1,9 @@
+﻿title: DaliIntro
+---
+Salvador Dali: placeholder
+<<triggeranim IntroCanvas>>
+<<gullcaw IntroCanvas>>
+Seagull: CAW!
+<<wait 1.5>>
+Salvador Dali: My stache! The source of my power!
+===
