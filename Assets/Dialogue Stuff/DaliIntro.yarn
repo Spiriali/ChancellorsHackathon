@@ -1,9 +1,33 @@
 ﻿title: DaliIntro
 ---
-Salvador Dali: placeholder
+Salvador Dali: This scene could be the inspiration for my next painting...
 <<triggeranim IntroCanvas>>
 <<gullcaw IntroCanvas>>
 Seagull: CAW!
 <<wait 1.5>>
-Salvador Dali: My stache! The source of my power!
+Salvador Dali: My stache! The source of all my artistic prowess!
+Salvador Dali: ...How will I paint now?
+===
+
+title: LvlIntro
+---
+<<dialoguestart Stache>>
+Stache: I need to find my way back to Salvador's face.
+Stache: That looks like a face right there...
+Stache: I'd better make my way to the upper lip and get a closer look.
+Stache: But those weird balls don't look particularly stable.
+<i>Press <b>W</b> to move forward, <b>A</b> and <b>D</b> to rotate, and <b>Space</b> to jump.</i>
+<<dialogueend Stache>>
+===
+
+title: MustachePoint
+---
+Stache: Hm. This does <i>not</i> feel like Salvador's upper lip.
+Stache: I'd better keep looking for him. Looks like there might be more to explore above me.
+<<dialogueend Stache>>
+===
+
+title: End
+---
+Salvador Dali: My mustache! It has found its way back to me!
 ===
