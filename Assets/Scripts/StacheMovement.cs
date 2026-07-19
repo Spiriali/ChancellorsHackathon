@@ -3,6 +3,14 @@ using System.Collections;
 
 public class StacheMovement : MonoBehaviour
 {
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+    }
+
     // get right and left mustache tips for rotation
     [Header("Pivot Points")]
     public Transform leftTip;
@@ -118,7 +126,8 @@ public class StacheMovement : MonoBehaviour
             float heightOffset = 4.0f * jumpHeight * t * (1.0f - t);
             float forwardOffset = jumpForwardDistance * t;
 
-            transform.position = startPos + (forwardDirection * forwardOffset) + (Vector3.up * heightOffset);
+            //transform.position = startPos + (forwardDirection * forwardOffset) + (Vector3.up * heightOffset);
+            rb.MovePosition(startPos + (forwardDirection * forwardOffset) + (Vector3.up * heightOffset));
 
             yield return null;
         }
