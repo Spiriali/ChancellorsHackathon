@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7878c9364a23d704b9ef075d83ebef10, type: 3}
       propertyPath: m_Name
-      value: golden+abstract+sculpture+3d+model
+      value: DaliFace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

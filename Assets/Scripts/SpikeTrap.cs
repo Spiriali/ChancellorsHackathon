@@ -79,7 +79,7 @@ public class SpikeTrapController : MonoBehaviour
             }
         }
 
-        // 2. STICKY WAIT: Dynamically wait until every single spike in this formation is done
+        /*// 2. STICKY WAIT: Dynamically wait until every single spike in this formation is done
         bool spikesAreStillActive = true;
         while (spikesAreStillActive)
         {
@@ -93,10 +93,10 @@ public class SpikeTrapController : MonoBehaviour
                 }
             }
             yield return null; // Wait one frame before checking again
-        }
+        }*/
 
         // 3. Spikes are safe in the ground! Now apply your 3-second delay between formations
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
     }
 }
 

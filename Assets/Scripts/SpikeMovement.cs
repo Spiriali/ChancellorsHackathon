@@ -44,7 +44,7 @@ public float launchAngleDegrees = 65f;
         popUpPosition = retractPosition + popUpOffset;
 
         // Cache renderer and original color
-        spikeRenderer = GetComponent<Renderer>();
+        spikeRenderer = transform.parent.GetComponent<Renderer>();
         
 
         // Fire the sequence exactly once
